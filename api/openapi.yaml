@@ -1,0 +1,21 @@
+openapi: 3.2.0
+info: 
+  title: Math API
+  description: | 
+    A math API with endpoints for addition, 
+    substraction, multiplication and division
+  
+components:
+  schemas:
+    Operation:
+      $ref: ./schemas/operation.yaml
+
+paths:
+  /add:
+    $ref: ./paths/operation.yaml
+  /substract:
+    $ref: ./paths/operation.yaml
+  /divide:
+    $ref: ./paths/operation.yaml
+  /multiply:
+    $ref: ./paths/operation.yaml
