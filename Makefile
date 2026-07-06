@@ -7,4 +7,12 @@ generate-models-python:
 		--input-file-type openapi \
 		--formatters builtin
 
-generate-models: generate-models-python
+generate-models-rust:
+	openapi-generator-cli generate \
+		-i api/openapi.yaml \
+		-g rust \
+		-o packages/generated/rust/models \
+		--global-property models \
+		--skip-validate-spec
+
+generate-models: generate-models-python generate-models-rust

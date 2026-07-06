@@ -12,3 +12,11 @@ pub fn error_add(error: QueryPayloadError, _req: &HttpRequest) -> actix_web::Err
     };
     actix_web::error::ErrorBadRequest(response)
 }
+
+use std::fmt;
+
+impl fmt::Display for ErrorResponse {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{}", self.message)
+    }
+}
