@@ -38,3 +38,4 @@ bin
 
 # Gradle
 gradle*
+.gradle
