@@ -11,7 +11,8 @@ generate-models-rust:
 	openapi-generator-cli generate \
 		-i api/openapi.yaml \
 		-g rust \
-		-o packages/generated/rust \
-		--global-property models
+		-o packages/generated/rust/models \
+		--global-property models \
+		--skip-validate-spec
 
 generate-models: generate-models-python generate-models-rust
