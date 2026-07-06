@@ -190,6 +190,7 @@ name = "add-service"
 version = "0.1.0"
 dependencies = [
  "actix-web",
+ "models",
  "serde",
 ]
 
@@ -791,6 +792,13 @@ dependencies = [
  "log",
  "wasi",
  "windows-sys 0.61.2",
+]
+
+[[package]]
+name = "models"
+version = "0.1.0"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
