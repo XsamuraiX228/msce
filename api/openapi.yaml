@@ -2,9 +2,6 @@ openapi: 3.0.3
 info: 
   title: Math API
   version: 1.0.0
-  description: | 
-    A math API with endpoints for addition, 
-    substraction, multiplication and division
   
 components:
   schemas:
