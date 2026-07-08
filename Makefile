@@ -12,7 +12,7 @@ generate-models-rust:
 		-i api/openapi.yaml \
 		-g rust \
 		-o packages/generated/rust/models \
-		--global-property models \
+		--global-property models, supportingFiles=false \
 		--skip-validate-spec
 
 generate-models: generate-models-python generate-models-rust

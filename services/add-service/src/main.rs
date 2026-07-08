@@ -1,6 +1,6 @@
 use actix_web::{App, HttpServer, web};
-use crate::add_handler::add_operation;
-use crate::error_handler::error_add;
+use crate::add_handler::add;
+use crate::error_handler::handle_query_error;
 pub mod init;
 pub mod add_handler;
 pub mod error_handler;
@@ -9,11 +9,11 @@ pub mod error_handler;
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         let query_cfg = web::QueryConfig::default()
-            .error_handler(error_add);
+            .error_handler(handle_query_error);
 
         App::new()
             .app_data(query_cfg)
-            .route("/add", web::get().to(add_operation))
+            .route("/add", web::get().to(add))
     })
     .bind(("127.0.0.1", 8080))?
     .run()

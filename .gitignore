@@ -41,3 +41,4 @@ gradle*
 .gradle
 packages/generated/rust/target/
 services/add-service/target/
+packages/generated/rust/models/target/

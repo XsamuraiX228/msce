@@ -1,16 +1,17 @@
 use crate::init::ErrorResponse;
 use actix_web::{HttpRequest, error::QueryPayloadError};
-pub fn error_add(error: QueryPayloadError, _req: &HttpRequest) -> actix_web::Error {
-    let clean_error = error
+
+pub fn handle_query_error(error: QueryPayloadError, _req: &HttpRequest) -> actix_web::Error {
+    let error_message = error
         .to_string()
         .split(":")
         .last()
         .map(|s| s.trim().to_string())
         .unwrap_or_default();
-    let response = ErrorResponse {
-        message: clean_error,
+    let error_body = ErrorResponse {
+        message: error_message,
     };
-    actix_web::error::ErrorBadRequest(response)
+    actix_web::error::ErrorBadRequest(error_body)
 }
 
 use std::fmt;
