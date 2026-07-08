@@ -1,11 +1,7 @@
 .PHONY: generate-models generate-models-python
 
 generate-models-python:
-	datamodel-codegen \
-		--input api/openapi.yaml \
-		--output packages/models/python/models.py \
-		--input-file-type openapi \
-		--formatters builtin
+	./codegen/models/python/generate.sh
 
 generate-models-rust:
 	openapi-generator-cli generate \
