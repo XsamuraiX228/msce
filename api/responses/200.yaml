@@ -1,6 +1,0 @@
-content:
-  schema:
-    type: object
-    properties:
-      result: 
-        type: number

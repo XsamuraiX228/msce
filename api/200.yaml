@@ -1,0 +1,8 @@
+description: Sum of 2 numbers
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        result:
+          type: number

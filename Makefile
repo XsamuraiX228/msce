@@ -1,14 +1,9 @@
 .PHONY: generate-models generate-models-python
 
-generate-models-python:
-	./codegen/models/python/generate.sh
+generate-api-python:
+	@./codegen/python/api/generate.sh >/dev/null
 
-generate-models-rust:
-	openapi-generator-cli generate \
-		-i api/openapi.yaml \
-		-g rust \
-		-o packages/generated/rust/models \
-		--global-property models \
-		--skip-validate-spec
+generate-api-rust:
+	@./codegen/rust/api/generate.sh >/dev/null
 
-generate-models: generate-models-python generate-models-rust
+generate-api: generate-api-python generate-api-rust

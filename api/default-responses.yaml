@@ -1,0 +1,18 @@
+"200":
+  description: placeholder
+  content:
+    application/json: 
+      schema:
+        type: object
+        properties: 
+          result:
+            type: number
+"400":
+  description: placeholder
+  content:
+    application/json: 
+      schema:
+        type: object
+        properties: 
+          message:
+            type: string

@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Math API
+  version: 0.1.0
+paths:
+  /add:
+    get:
+      operationId: add
+      parameters:
+        - $ref: '#/components/parameters/a'
+        - $ref: '#/components/parameters/b'
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        '400':
+          $ref: '#/components/responses/400'
+components:
+  schemas:
+    Operation:
+      type: object
+      properties:
+        a:
+          type: number
+        b:
+          type: number
+      required:
+        - a
+        - b
+  parameters:
+    a:
+      name: a
+      in: query
+      required: true
+      schema:
+        type: number
+    b:
+      name: b
+      in: query
+      required: true
+      schema:
+        type: number
+  responses:
+    '200':
+      description: Sum of 2 numbers
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              result:
+                type: number
+    '400':
+      description: Invalid type or values not defined
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
