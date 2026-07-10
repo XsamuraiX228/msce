@@ -17,7 +17,7 @@ omg \
 
 # Changing from module to library
 mv $PACKAGE_PATH/src/models.rs $PACKAGE_PATH/src/lib.rs
-rm $PACKAGE_PATH/mod.rs
+rm $PACKAGE_PATH/src/mod.rs
 
 # Creating Cargo.toml
 cp $CODEGEN_PATH/Cargo.toml $PACKAGE_PATH
