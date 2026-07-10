@@ -1,4 +1,4 @@
-description: Operation success
+description: Operation
 content:
   application/json:
     schema:

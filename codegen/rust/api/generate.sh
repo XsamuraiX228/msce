@@ -5,10 +5,8 @@ CODEGEN_PATH=codegen/rust/api
 
 bundle=$(mktemp --suffix=.yaml)
 
-# Required for package
-if [ ! -d "src" ]; then
-    mkdir $PACKAGE_PATH/src
-endif
+# Creating package path if not present
+mkdir -p $PACKAGE_PATH/src
 
 # Generating models
 redocly bundle api/openapi.yaml > $bundle
