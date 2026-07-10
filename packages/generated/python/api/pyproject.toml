@@ -1,4 +1,8 @@
 [project]
-name = "models"
+name = "api"
 version = "0.1.0"
 dependencies = ["pydantic"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

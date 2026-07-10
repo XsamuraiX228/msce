@@ -15,8 +15,40 @@ paths:
           $ref: "./200.yaml"
         "400":
           $ref: "./400.yaml"
+  /subtract:
+    get:
+      operationId: subtract
+      parameters:
+        - $ref: "./a.yaml"
+        - $ref: "./b.yaml"
+      responses:
+        "200":
+          $ref: "./200.yaml"
+        "400":
+          $ref: "./400.yaml"
+  /multiply:
+    get:
+      operationId: multiply
+      parameters:
+        - $ref: "./a.yaml"
+        - $ref: "./b.yaml"
+      responses:
+        "200":
+          $ref: "./200.yaml"
+        "400":
+          $ref: "./400.yaml"
+  /divide:
+    get:
+      operationId: divide
+      parameters:
+        - $ref: "./a.yaml"
+        - $ref: "./b.yaml"
+      responses:
+        "200":
+          $ref: "./200.yaml"
+        "400":
+          $ref: "./400.yaml"
 
-    
 components:
   schemas:
     Operation:
