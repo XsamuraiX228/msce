@@ -190,7 +190,7 @@ name = "add-service"
 version = "0.1.0"
 dependencies = [
  "actix-web",
- "models",
+ "api",
  "serde",
 ]
 
@@ -222,6 +222,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0e76a019e91224d279006ff972f1e984179a6e9feb050adba6ce8274aef23195"
 dependencies = [
  "alloc-no-stdlib",
+]
+
+[[package]]
+name = "api"
+version = "0.1.0"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
@@ -792,13 +799,6 @@ dependencies = [
  "log",
  "wasi",
  "windows-sys 0.61.2",
-]
-
-[[package]]
-name = "models"
-version = "0.1.0"
-dependencies = [
- "serde",
 ]
 
 [[package]]
