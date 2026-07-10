@@ -1,4 +1,4 @@
-description: Sum of 2 numbers
+description: Operation success
 content:
   application/json:
     schema:
