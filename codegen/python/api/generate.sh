@@ -1,7 +1,6 @@
 #!/bin/sh
 
 PACKAGE_PATH=packages/generated/python/api
-# Кequired for copying static files
 CODEGEN_PATH=codegen/python/api
 
 # Generating models
