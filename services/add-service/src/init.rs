@@ -1,5 +1,5 @@
 use serde::Serialize;
-pub use models::operation::Operation;
+pub use models::models::Operation;
 
 #[derive(Serialize)]
 pub struct SuccessResponse {

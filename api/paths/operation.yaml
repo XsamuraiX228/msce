@@ -1,19 +1,26 @@
 get:
+  description: "Performs a mathematical operation using query parameters"  
   parameters:
     - name: a
       in: query
       required: true
+      description: "First operand"  
       schema:
         type: number
+        description: "Numeric value for the first operand"  
 
     - name: b
       in: query
       required: true
+      description: "Second operand"  
       schema:
         type: number
-
+        description: "Numeric value for the second operand"  
+        
   responses:
     "200":
+      description: "Successful operation" 
       $ref: ../responses/200.yaml
     "400":
+      description: "Bad request - invalid parameters"  
       $ref: ../responses/400.yaml

@@ -1,6 +1,11 @@
+description: Error operation result
 content:
-  schema:
-    type: object
-    properties:
-      message: 
-        type: string
+  application/json: 
+    description: "Error response schema"  
+    schema:
+      type: object
+      description: "Error response schema"  
+      properties:
+        message: 
+          type: string
+          description: "Error message describing what went wrong"  

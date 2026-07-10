@@ -1,8 +1,9 @@
-openapi: 3.1.0
-info: 
+openapi: 3.0.3
+info:
   title: Math API
   version: 1.0.0
-  
+  description: "Simple math API"
+
 components:
   schemas:
     Operation:
