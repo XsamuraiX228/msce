@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PACKAGE_PATH=packages/generated/rust/models
+PACKAGE_PATH=packages/generated/rust/models/src
 
 bundle=$(mktemp --suffix=.yaml)
 echo $bundle
