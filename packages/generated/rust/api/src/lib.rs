@@ -4,11 +4,9 @@
 
 use serde::{Serialize, Deserialize};
 
-/// Request body for math operations
+/// Operation
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Operation {
-    /// variable a
     pub a: f64,
-    /// variable b
     pub b: f64,
 }

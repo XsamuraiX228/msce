@@ -1,9 +1,9 @@
 .PHONY: generate-models generate-models-python
 
-generate-models-python:
-	./codegen/models/python/generate.sh
+generate-api-python:
+	@./codegen/python/api/generate.sh >/dev/null
 
-generate-models-rust:
-	./codegen/models/rust/generate.sh
+generate-api-rust:
+	@./codegen/rust/api/generate.sh >/dev/null
 
-generate-models: generate-models-python generate-models-rust
+generate-api: generate-api-python generate-api-rust

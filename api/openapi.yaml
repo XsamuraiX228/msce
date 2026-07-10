@@ -1,20 +1,29 @@
 openapi: 3.0.3
 info:
   title: Math API
-  version: 1.0.0
-  description: "Simple math API"
-
-components:
-  schemas:
-    Operation:
-      $ref: ./schemas/operation.yaml
+  version: 0.1.0
 
 paths:
   /add:
-    $ref: ./paths/operation.yaml
-  /substract:
-    $ref: ./paths/operation.yaml
-  /divide:
-    $ref: ./paths/operation.yaml
-  /multiply:
-    $ref: ./paths/operation.yaml
+    get:
+      operationId: add
+      parameters:
+        - $ref: "./a.yaml"
+        - $ref: "./b.yaml"
+      responses:
+        "200":
+          $ref: "./200.yaml"
+        "400":
+          $ref: "./400.yaml"
+
+    
+components:
+  schemas:
+    Operation:
+      type: object
+      properties: 
+        a:
+          type: number
+        b:
+          type: number
+      required: [a, b]
