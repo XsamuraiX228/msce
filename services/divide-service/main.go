@@ -2,16 +2,25 @@ package main
 
 import (
 	"fmt"
-	"net/http"
-
 	"msce/packages/generated/go/api"
+	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 // curl.exe "http://localhost:8080/divide?a=15&b=3"
 
 func main() {
+	if err := godotenv.Load(); err != nil {
+		fmt.Println("No .env file found, using default port")
+	}
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 	engine := gin.Default()
 
 	engine.GET("/divide", func(ctx *gin.Context) {
@@ -24,7 +33,7 @@ func main() {
 		}
 
 		if params.B == 0 {
-			ctx.JSON(http.StatusBadRequest, api.N400 {
+			ctx.JSON(http.StatusBadRequest, api.N400{
 				Message: new("Division by zero ⛔"),
 			})
 			return
@@ -36,6 +45,6 @@ func main() {
 			Result: &result,
 		})
 	})
-	fmt.Println("Server succesfully run")
-	engine.Run(":8080")
+	fmt.Println("Server running on port:", port)
+	engine.Run(":" + port)
 }

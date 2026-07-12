@@ -6,6 +6,7 @@ replace msce/packages/generated/go/api => ../../packages/generated/go/api
 
 require (
 	github.com/gin-gonic/gin v1.12.0
+	github.com/joho/godotenv v1.5.1
 	msce/packages/generated/go/api v0.0.0-00010101000000-000000000000
 )
 
