@@ -15,13 +15,23 @@ paths:
           $ref: "./200.yaml"
         "400":
           $ref: "./400.yaml"
+  /divide:
+    get:
+      operationId: divide
+      parameters:
+        - $ref: "./a.yaml"
+        - $ref: "./b.yaml"
+      responses:
+        "200":
+          $ref: "./200.yaml"
+        "400":
+          $ref: "./400.yaml"
 
-    
 components:
   schemas:
     Operation:
       type: object
-      properties: 
+      properties:
         a:
           type: number
         b:

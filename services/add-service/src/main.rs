@@ -1,6 +1,6 @@
 use crate::errors::map_query_error;
 use actix_web::{App, HttpServer, web};
-pub mod handlers;
+pub mod add_handler;
 pub mod errors;
 pub mod types;
 
@@ -11,7 +11,7 @@ async fn main() -> std::io::Result<()> {
 
         App::new()
             .app_data(query_cfg)
-            .service(handlers::add_operation)
+            .service(add_handler::add_operation)
     })
     .bind(("127.0.0.1", 8080))?
     .run()
