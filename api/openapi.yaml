@@ -53,7 +53,15 @@ components:
   schemas:
     Operation:
       type: object
-      properties: 
+      properties:
+        a:
+          type: number
+        b:
+          type: number
+      required: [a, b]
+    APIResponse:
+      type: object
+      properties:
         a:
           type: number
         b:

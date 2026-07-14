@@ -9,7 +9,7 @@ bundle=$(mktemp --suffix=.yaml)
 mkdir -p $PACKAGE_PATH/src
 
 # Generating models
-redocly bundle api/openapi.yaml > $bundle
+redocly bundle api/openapi.yaml | openapi-abbreviation-convert > $bundle
 omg \
     --input $bundle \
     --output $PACKAGE_PATH/src \

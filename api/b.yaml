@@ -3,3 +3,5 @@ in: query
 required: true
 schema:
   type: number
+  x-oapi-codegen-extra-tags:
+      binding: required

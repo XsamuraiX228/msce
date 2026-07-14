@@ -4,6 +4,13 @@
 
 use serde::{Serialize, Deserialize};
 
+/// ApiResponse
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ApiResponse {
+    pub a: f64,
+    pub b: f64,
+}
+
 /// Operation
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Operation {
